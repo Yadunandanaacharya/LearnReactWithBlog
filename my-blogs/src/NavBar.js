@@ -4,7 +4,7 @@ const NavBar = () => {
             <h1>The React blogs</h1>
             <div className="links">
                 <a href="/">Home</a>
-                <a href="/create">New Blog</a>
+                <a href="/create">New Blog </a>
             </div>
         </nav>
      );
