@@ -39,7 +39,7 @@ const Home = () => {
 
             <br></br> <br></br>
             <button onClick={(e)=>{displayButtonEvent('Yadu ',e)}}>Click to display Button event</button>
-            <h2>This is about React</h2>
+            <h2>This is about React </h2>
         </div>
      );
 }
