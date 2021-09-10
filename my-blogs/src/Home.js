@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 
 const Home = () => {
-    const [blogs, setBlogs] = useState([
-      { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-      { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-      { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
-    ]);
+    const [blogs, setBlogs] = useState(null);
+    //here above deleted listed data which is hardcoded from here onward displaying data like
+    //it's coming from an API. So run this command in another port by pressing on + sign on terminal
+    //npx json-server --watch src/data/db.json --port 3001
+    //we're running 2 ports one for react another for like server data we display data from
+    //data folder db.json file
 
   // const [name, setName] = useState('mario'); 
 
