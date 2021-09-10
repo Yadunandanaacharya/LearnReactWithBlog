@@ -5,7 +5,7 @@ import Home from './Home';
 function App() {
   const title = 'Welcome to react blog';
   const likes = 50;
-  const link = 'https://www.youtube.com/';
+  // const link = 'https://www.youtube.com/';
   // const personInfo = {name:'ram' , age:30}
 
   return (
@@ -27,10 +27,10 @@ function App() {
         <p>{' string Yadu'}</p>
         <h2>{' string Software developer '}</h2>
 
-        <a href="" >{1}</a>
-        <p>[1, 2, 4]</p>
+        {/* <a href="" >{1}</a>
+        <p>[1, 2, 4]</p> */}
 
-        <a href={link} >Youtube</a>
+        {/* <a href={link} >Youtube</a> */}
       </div>
     </div>
   );
