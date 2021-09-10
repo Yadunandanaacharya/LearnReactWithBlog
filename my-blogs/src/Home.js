@@ -7,6 +7,7 @@ const Home = () => {
   const [isLoading, setIsPending] = useState(true); 
 
 useEffect(()=>{
+  setTimeout(()=>{
   fetch('http://localhost:3001/blogs')
     .then(res =>{
       return res.json();
@@ -15,6 +16,7 @@ useEffect(()=>{
       setBlogs(data);
       setIsPending(false);
     })
+  },5000);
 },[]);
 
   return (
