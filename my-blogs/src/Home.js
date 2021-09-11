@@ -3,30 +3,32 @@ import BlogList from "./BlogList";
 
 const Home = () => {
     const [blogs, setBlogs] = useState(null);
-
-  // const [name, setName] = useState('mario'); 
+  const [isLoading, setIsPending] = useState(true); 
 
 useEffect(()=>{
+  setTimeout(()=>{
   fetch('http://localhost:3001/blogs')
     .then(res =>{
       return res.json();
     })
     .then(data =>{
-      console.log(data);
       setBlogs(data);
+      setIsPending(false);
     })
     .catch(error => {
       console.log(error.message); 
     });
+
+  },5000);
+
 },[]);
 
   return (
     <div className="home">
+      {isLoading && <div> Loading. . .</div>}
       {blogs && <BlogList blogs={blogs} title="All Blogs"  />}
-      {/* <button onClick={()=> setName('Sri Ram')}>Change name </button> */}
-      {/* <p>{ name}</p> */}
     </div>
   );
 }
- 
+
 export default Home;
