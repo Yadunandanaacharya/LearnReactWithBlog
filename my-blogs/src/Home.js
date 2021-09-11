@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 
 const Home = () => {
-  const [blogs, setBlogs] = useState(null);
-
+    const [blogs, setBlogs] = useState(null);
   const [isLoading, setIsPending] = useState(true); 
 
 useEffect(()=>{
@@ -16,7 +15,12 @@ useEffect(()=>{
       setBlogs(data);
       setIsPending(false);
     })
+    .catch(error => {
+      console.log(error.message); 
+    });
+
   },5000);
+
 },[]);
 
   return (
