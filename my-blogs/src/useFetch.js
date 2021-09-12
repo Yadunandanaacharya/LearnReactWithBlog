@@ -4,7 +4,6 @@ const useFetch = (url) =>{
     const [data, setData ] = useState(null);
     const [isLoading, setIsPending] = useState(true); 
     const [error, setError] = useState(null); 
-   
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -25,10 +24,8 @@ const useFetch = (url) =>{
             setIsPending(false);
             setError(error); 
           });
-      
         },1000);
-      
-      },[]);
+      },[url]);
     return {data, isLoading, error};
 }
 
